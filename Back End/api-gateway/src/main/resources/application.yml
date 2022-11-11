@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: inventory-management
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/inventory/**
+        - id: room-management
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/room/**
+        - id: user-management
+          uri: http://localhost:8083/
+          predicates:
+            - Path=/user/**
+        - id: guest-management
+          uri: http://localhost:8084/
+          predicates:
+            - Path=/guest/**
+        - id: reservation-management
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/reservation/**
+      globalcors:
+       corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000/"
+            allowedMethods: "*"
+            allowedHeaders: "*"     
+            allow-credentials: true    
+server:
+  port: 8888

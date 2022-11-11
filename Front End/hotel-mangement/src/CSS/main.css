@@ -1,0 +1,140 @@
+.pavbut {
+    min-width: 330px;
+}
+.main{
+    padding: 50px;
+}
+.pavhead{
+    width:100%; 
+    background-color:  rgb(233, 226, 216);
+}
+.pavfoot{
+        position: fixed; 
+        bottom:0%;
+        width:100%; 
+        background-color:  rgb(233, 226, 216);
+        text-align: center;
+}
+.pavhomebut{
+    width: 330px;
+    padding: 10px;
+}
+.pavhometxt{
+  position: fixed;
+    left: 0;
+}
+.pavhomelogin{
+    right: 0;
+    top: 0;
+}
+.pavhomeimg{
+    width: 800px;
+    height: 550px;
+}
+.pavhombg{
+    background-color:  rgb(233, 226, 216);
+}
+.validatered{
+    color: rgb(122, 2, 2);
+    font-family: 'Times New Roman', Times, serif;
+}
+.pavlog{
+    padding: 20px;
+}
+.h1{
+    color:rgb(12, 12, 12);
+    font-size: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+.follow{
+    float: right;
+}
+#insta{
+    color: rgb(179, 18, 18);
+    text-decoration: none;
+}
+#face{
+    color: rgb(16, 16, 133);
+    text-decoration: none;
+}
+#link{
+    color: rgb(112, 160, 231);
+    text-decoration: none;
+}
+.pavresume{
+    color: white;
+    text-decoration: none;
+}
+.pavhomebgcolor{
+    background-color: aqua;
+}
+.pavabout{
+    margin-top: 90px;
+    text-align: center;
+    color: rgb(10, 9, 9);
+}
+/* .pavaboutimg{
+    background-image: url('https://media.istockphoto.com/photos/fog-in-black-smoke-and-mist-on-wooden-table-halloween-backdrop-picture-id1341515382?b=1&k=20&m=1341515382&s=170667a&w=0&h=tWLxX861vcc63wxX1flAvwVhZouZ3blavWpUsu0K55k=');
+ background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+.homeimg{
+    height: 400px;
+    width: 1265px;
+}
+.hometxt{
+    text-align: center;
+    font-size: large;
+}
+.left {
+    margin-left: 840px;
+    border-style: outset;
+    width: 30%;
+    border-radius: 10px;
+}
+.right {
+   margin-top: -658px;
+   width: 30%;
+    border-style: outset;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+.jyohomcentre{
+    width: 30%;
+    margin-left: 430px;
+    border-style: outset;
+    margin-top: -670px;
+    border-radius: 10px;
+}
+.pavpicimg{
+    width: 100%;
+    height: 100%;
+}
+.hompicimgtxt{
+    text-align: center;
+}
+.homebottom{
+    width: 100%;
+}
+.pavcontacttext{
+    text-align: center;
+    margin-top: 50px;
+}
+.headlogo{
+    width: 50px;
+    margin-top: -10px;
+    height: 60px;
+    right: 0;
+}
+.pavaboutimg{
+    margin-top: -100px;
+}
