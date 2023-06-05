@@ -89,30 +89,25 @@
 } */
 .homeimg{
     height: 400px;
-    width: 1265px;
+    width: 100%;
 }
 .hometxt{
     text-align: center;
     font-size: large;
 }
 .left {
-    margin-left: 840px;
     border-style: outset;
-    width: 30%;
+    width: 33%;
     border-radius: 10px;
 }
 .right {
-   margin-top: -658px;
-   width: 30%;
+   width: 33%;
     border-style: outset;
-    margin-left: 15px;
     border-radius: 10px;
 }
 .jyohomcentre{
-    width: 30%;
-    margin-left: 430px;
+    width: 33%;
     border-style: outset;
-    margin-top: -670px;
     border-radius: 10px;
 }
 .pavpicimg{
@@ -137,4 +132,12 @@
 }
 .pavaboutimg{
     margin-top: -100px;
+}
+.first-row{
+    display: flex;
+    justify-content: space-between;
+}
+.footer{
+    position: relative;
+    margin-top: 131px;
 }
