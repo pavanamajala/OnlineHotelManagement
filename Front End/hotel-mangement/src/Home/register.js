@@ -1,5 +1,5 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Link, useNavigate } from 'react-router-dom';
+// import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import download from '../Images/welcome.png'
 import axios from 'axios';
@@ -14,9 +14,7 @@ export default function Register() {
   const [password, setPassword] = useState('')
   const [repassword, setrePassword] = useState('')
   const [role, SetUser] = useState('')
-  const [loading, setLoading] = useState('login');
-
-  console.log({ email, password })
+  const loading = 'login';
 
   const handleEmail = (e) => {
     setEmail(e.target.value)
@@ -35,7 +33,6 @@ export default function Register() {
 
   const handleApi = () => {
 
-    console.log({ email, password })
 
     if (!email) {
       document.getElementById("userValidate").innerHTML = "Username can't be empty";
@@ -43,7 +40,7 @@ export default function Register() {
       document.getElementById("passValidate").innerHTML = "Password can't be empty";
     } else if (password.length < 4) {
       document.getElementById("passValidate").innerHTML = "Password should have minimum 4 characters";
-    } else if (password != repassword) {
+    } else if (password !== repassword) {
       document.getElementById("repassValidate").innerHTML = "Password's didn't match";
     } else {
       axios.post('http://localhost:8888/user/sign/add', {
@@ -52,7 +49,6 @@ export default function Register() {
         role: role
 
       }).then(result => {
-        console.log(result)
         // const role = result.data.authorities[0].authority;
 
         alert(result.data)
@@ -74,7 +70,7 @@ export default function Register() {
 
 
     <div className="container ">
-      <div className='pavhometxt'><img className='pavhomeimg' src={download}></img>
+      <div className='pavhometxt'><img className='pavhomeimg' src={download} alt=''></img>
       </div>
       <div className="row pavhomelogin">
         <div className="col-md-4 offset-md-8 border rounded p-4 mt-5 shadow pavhombg">
@@ -109,7 +105,7 @@ export default function Register() {
             <label htmlFor="pass" className="form-label">
               <b> Role:</b>
             </label><br></br>
-            <div style={{ display: "flex", justifyContent: "space-between", width: "60%"}}>
+            <div style={{ display: "flex", justifyContent: "space-between", width: "60%" }}>
               <div>
                 <input
                   type="radio"
@@ -119,7 +115,7 @@ export default function Register() {
                   onChange={handleRole}
                 >
                 </input>
-                <label for="manager">Admin </label>
+                <label htmlFor="manager">Admin </label>
               </div>
               <div>
                 <input
@@ -130,7 +126,7 @@ export default function Register() {
                   onChange={handleRole}
                 >
                 </input>
-                <label for="receptionist">Author</label>
+                <label htmlFor="receptionist">Author</label>
               </div>
               <div>
                 <input
@@ -141,7 +137,7 @@ export default function Register() {
                   onChange={handleRole}
                 >
                 </input>
-                <label for="manager">User </label>
+                <label htmlFor="manager">User </label>
               </div>
 
             </div>
@@ -157,7 +153,7 @@ export default function Register() {
                             value="true"
                             onChange={(e)=>onInputChange(e)}
                             />
-                          <label for="true">Yes</label>
+                          <label htmlFor="true">Yes</label>
                           <input 
                             type="radio" 
                             id="false" 
@@ -165,7 +161,7 @@ export default function Register() {
                             value="false"
                             onChange={(e)=>onInputChange(e)}
                             />
-                          <label for="false">No</label><br/> */}
+                          <label htmlFor="false">No</label><br/> */}
 
           <button className="btn btn-primary pavhomebut" onClick={handleApi}>{loading}</button><br /><br />
 

@@ -4,7 +4,7 @@ import owner from "../Images/owner.png"
 export default function Owner() {
   return (
     <div className="container ">
-    <div className='pavhometxt'><img className='pavhomeimg' src={owner}></img></div>
+    <div className='pavhometxt'><img className='pavhomeimg' src={owner} alt=''></img></div>
     <div className="row pavhomelogin">
       <div className="col-md-4 offset-md-8 border rounded p-4 mt-5 shadow pavhombg">
         <h2 className='text-centre'>Hello Owner</h2><br></br>

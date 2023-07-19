@@ -1,6 +1,6 @@
 import React from 'react'
 import '../CSS/main.css'
-import abt from '../Images/about.png'
+// import abt from '../Images/about.png'
 
 export default function About() {
   return (
@@ -22,7 +22,7 @@ export default function About() {
         </div>
       </div>
       {/* <div className='pavaboutimg'>
-        <img src={abt}></img>
+        <img src={abt} alt=''></img>
       </div> */}
     </div>
   )

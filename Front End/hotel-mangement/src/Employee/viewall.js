@@ -1,13 +1,13 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Auth from "../Auth/auth";
 
 function ViewAllEmployee(){
 
   const [users, setUsers] = useState([]);
 
-  const{employeeId}=useParams()
+  // const{employeeId}=useParams()
 
   useEffect(()=>{
       loadUsers();

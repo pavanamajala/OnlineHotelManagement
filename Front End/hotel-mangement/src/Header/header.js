@@ -1,13 +1,13 @@
 import React from 'react'
-import logo from '../Images/logo.png'
+// import logo from '../Images/logo.png'
 
 export default function Header() {
   return (
     
-    <nav class="navbar navbar-dark pavhead">
-      <div class="container-md">
-           <a class="navbar-brand text-left text-dark" href="/">Home</a>
-        <div class="navbar-brand text-centre">
+    <nav className="navbar navbar-dark pavhead">
+      <div className="container-md">
+           <a className="navbar-brand text-left text-dark" href="/">Home</a>
+        <div className="navbar-brand text-centre">
             <b className='text-dark'>E-BOOK MAKER APP</b>
         </div>
         <div className='navbar-brand text-right '> 
@@ -21,7 +21,7 @@ export default function Header() {
         </div>
       </div>
         {/* <div>
-          <img className='headlogo' src={logo}></img>
+          <img className='headlogo' src={logo} alt=''></img>
         </div> */}
     </nav>
 

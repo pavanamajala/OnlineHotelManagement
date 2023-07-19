@@ -14,9 +14,9 @@ export default function Contact() {
           </div>
           <div className="text-centre"><h1><u>Follow me on </u></h1>&emsp;<br></br>
             <h2>
-                <a id="insta" href="https://www.instagram.com/pavan.in/" target="_blank">Instagram</a>&emsp;
-                <a id="face" href="https://www.facebook.com/pavan.amajala/" target="_blank">Facebook</a>&emsp;
-                <a id="link" href="https://www.linkedin.com/in/sri-ram-pavan-amajala-a31404192" target="_blank">Linkedin</a>&emsp;
+                <a id="insta" href="https://www.instagram.com/pavan.in/" target="_blank" rel="noreferrer">Instagram</a>&emsp;
+                <a id="face" href="https://www.facebook.com/pavan.amajala/" target="_blank" rel="noreferrer">Facebook</a>&emsp;
+                <a id="link" href="https://www.linkedin.com/in/sri-ram-pavan-amajala-a31404192" target="_blank" rel="noreferrer">Linkedin</a>&emsp;
             </h2>
           </div>
         </div>

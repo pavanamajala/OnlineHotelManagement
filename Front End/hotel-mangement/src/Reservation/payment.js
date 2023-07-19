@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect,useState } from "react";
-import { Link, useParams } from "react-router-dom";
+// import { Link, useParams } from "react-router-dom";
 
 export default function Payment(){
 
@@ -15,11 +15,11 @@ export default function Payment(){
         totalPrice:""
       });
     
-      const { reservationId } = useParams();
+      // const { reservationId } = useParams();
     
       useEffect(() => {
         loadUser();
-      }, []);
+      },[]);
     
       const loadUser = async () => {
         const result = await axios.get(`http://localhost:8888/reservation/view/${11}`);
@@ -58,7 +58,7 @@ export default function Payment(){
                                 <tr>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                                 <a className="btn btn-primary float-left" href="/reservation/viewall">&ensp;&ensp;CASH&ensp;&ensp;</a>&ensp;&ensp;&ensp;&ensp;
                                 <td></td>
-                                <a className="btn btn-primary float-right">Pay Online</a>
+                                <a className="btn btn-primary float-right" href="/reservation/viewall">Pay Online</a>
                                 </tr>
                             </table><br></br>
                      </div>

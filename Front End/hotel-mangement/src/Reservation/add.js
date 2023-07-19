@@ -42,7 +42,6 @@ export default function AddReservation() {
         } else{
         e.preventDefault();
         const res=await axios.post("http://localhost:8888/reservation/add", user);
-        console.log(res)
         if(res.data === 'noroom'){
             alert("You entered room is already booked! Please Select any other available room")
         } else if(res.data === 'noguest'){

@@ -4,7 +4,7 @@ import manager from "../Images/manager.png"
 export default function Manager() {
   return (
     <div className="container ">
-    <div className='pavhometxt'><img className='pavhomeimg' src={manager}></img></div>
+    <div className='pavhometxt'><img className='pavhomeimg' src={manager} alt=''></img></div>
     <div className="row pavhomelogin">
       <div className="col-md-4 offset-md-8 border rounded p-4 mt-5 shadow pavhombg">
         <h2 className='text-centre'>Hello Manager</h2><br></br>

@@ -16,7 +16,7 @@ export default function ViewInventory() {
 
   useEffect(() => {
     loadUser();
-  }, []);
+  },[]);
 
   const loadUser = async () => {
     const result = await axios.get(`http://localhost:8888/inventory/view/${inventoryId}`,{headers:Auth()});

@@ -195,23 +195,28 @@ public class UserControl {
 	
 	
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-	public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
-		try {
-			authenticationManager.authenticate(
-					new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
-			);
+	public String createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) {
+		List<User> userDetails = userService.viewAllUser();
+		for(User user: userDetails) {
+			if(user.getPassword().equals(authenticationRequest.getPassword()) && user.getUsername().equals(authenticationRequest.getUsername())) return user.getRole();
 		}
-		catch (BadCredentialsException e) {
-			throw new Exception("Incorrect username or password", e);
-		}
-		final UserDetails userDetails = userDetailsService
-				.loadUserByUsername(authenticationRequest.getUsername());
-
-		final String jwt = jwtTokenUtil.generateToken(userDetails);
-		
-		User us = userRepository.findByUsername(authenticationRequest.getUsername());
-
-		return ResponseEntity.ok(new AuthenticationResponse(jwt, us));		
+		return "";
+//		try {
+//			authenticationManager.authenticate(
+//					new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
+//			);
+//		}
+//		catch (BadCredentialsException e) {
+//			throw new Exception("Incorrect username or password", e);
+//		}
+//		final UserDetails userDetails = userDetailsService
+//				.loadUserByUsername(authenticationRequest.getUsername());
+//
+//		final String jwt = jwtTokenUtil.generateToken(userDetails);
+//		
+//		User us = userRepository.findByUsername(authenticationRequest.getUsername());
+//
+//		return ResponseEntity.ok(new AuthenticationResponse(jwt, us));		
 		
 	}
 	

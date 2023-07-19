@@ -18,7 +18,7 @@ export default function ViewReservation() {
 
   useEffect(() => {
     loadUser();
-  }, []);
+  },[]);
 
   const loadUser = async () => {
     const result = await axios.get(`http://localhost:8888/reservation/view/${reservationId}`);

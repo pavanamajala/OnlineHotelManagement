@@ -15,7 +15,7 @@ export default function UpdateRoom() {
     });
 
 
-     const{roomType,roomRent,roomAvailable}=user
+     const{roomType,roomRent}=user
 
     const onInputChange=(e)=>{
 
@@ -90,7 +90,7 @@ export default function UpdateRoom() {
                             value="true"
                             onChange={(e)=>onInputChange(e)}
                             />
-                          <label for="html">Yes</label>
+                          <label htmlFor="html">Yes</label>
                           <input 
                             type="radio" 
                             id="false" 
@@ -98,7 +98,7 @@ export default function UpdateRoom() {
                             value="false"
                             onChange={(e)=>onInputChange(e)}
                             />
-                          <label for="css">NO</label><br/>
+                          <label htmlFor="css">NO</label><br/>
                     </div>
                     <button type="submit" className="btn btn-outline-primary">Submit</button>
                     <Link to="/room/viewall" className="btn btn-outline-danger mx-2">Cancel</Link>

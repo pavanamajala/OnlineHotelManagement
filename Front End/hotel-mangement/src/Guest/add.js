@@ -37,7 +37,6 @@ export default function AddGuest() {
     }
 
     const onSubmit=async (e)=> {
-        console.log(user.guestId)
         if(!guestId){
             document.getElementById("text").innerHTML = "ID can't be empty";
         } else{

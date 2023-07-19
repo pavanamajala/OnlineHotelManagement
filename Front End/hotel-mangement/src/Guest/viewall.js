@@ -1,17 +1,17 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Auth from "../Auth/auth";
 
 function ViewAllGuest(){
 
     const [users, setUsers] = useState([]);
 
-    const{guestId}=useParams()
+    // const{guestId}=useParams()
 
     useEffect(()=>{
         loadUsers();
-    }, []);
+    },[]);
 
     const loadUsers=async()=>{
         const result=await axios.get("http://localhost:8888/guest/viewall",{headers:Auth()});

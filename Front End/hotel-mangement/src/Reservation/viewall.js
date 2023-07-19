@@ -1,12 +1,12 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ViewAllReservation(){
 
   const [users, setUsers] = useState([]);
 
-  const{reservationId}=useParams()
+  // const{reservationId}=useParams()
 
   useEffect(()=>{
       loadUsers();

@@ -15,7 +15,7 @@ export default function Home() {
         <div>
             <div>
                 <div >
-                    <img className='homeimg' src={home}></img>
+                    <img className='homeimg' src={home} alt=''></img>
                 </div>
                 <div>
                     <div className='hometxt '><br />
@@ -27,21 +27,21 @@ export default function Home() {
                     {/* pic 1    ********************** */}
                     <div className='first-row'>
                         <div className="left">
-                            <img className='pavpicimg' src={room1} />
+                            <img className='pavpicimg' src={room1} alt=''/>
                             <div className="hompicimgtxt text-success">
                                 <h2>Oasis</h2>
                                 <p>Retreat to a contemporary space infused with elements of Indian culture. Live between a modern city and the open country. Discover the enchanting Angsana Bangalore.</p>
                             </div>
                         </div>
                         <div className="right">
-                            <img className='pavpicimg' src={room2} />
+                            <img className='pavpicimg' src={room2} alt=''/>
                             <div className="hompicimgtxt text-success">
                                 <h2>Resort</h2>
                                 <p>Set on an idyllic lush green hilltop overlooking the turquoise waters of Benitses Bay, Angsana Corfu offers chic, contemporary accommodation with far reaching sea views.</p>
                             </div>
                         </div>
                         <div className="jyohomcentre">
-                            <img className='pavpicimg' src={room3} />
+                            <img className='pavpicimg' src={room3} alt=''/>
                             <div className="hompicimgtxt text-success">
                                 <h2>Maison</h2>
                                 <p>Maison Souvannaphoum is a historical boutique hotel in the heart of Luang Prabang with magnificent French colonial rooms infused with romance and style and many more.</p>
@@ -52,21 +52,21 @@ export default function Home() {
                     {/* pic 1    ********************** */}
                     <div className='first-row'>
                         <div className="left">
-                            <img className='pavpicimg' src={resort1} />
+                            <img className='pavpicimg' src={resort1} alt=''/>
                             <div className="hompicimgtxt text-success">
                                 <h2>Oasis</h2>
                                 <p>Retreat to a contemporary space infused with elements of Indian culture. Live between a modern city and the open country. Discover the enchanting Angsana Bangalore.</p>
                             </div>
                         </div>
                         <div className="right">
-                            <img className='pavpicimg' src={resort2} />
+                            <img className='pavpicimg' src={resort2} alt=''/>
                             <div className="hompicimgtxt text-success">
                                 <h2>Resort</h2>
                                 <p>Set on an idyllic lush green hilltop overlooking the turquoise waters of Benitses Bay, Angsana Corfu offers chic, contemporary accommodation with far reaching sea views.</p>
                             </div>
                         </div>
                         <div className="jyohomcentre">
-                            <img className='pavpicimg' src={resort3} />
+                            <img className='pavpicimg' src={resort3} alt=''/>
                             <div className="hompicimgtxt text-success">
                                 <h2>Maison</h2>
                                 <p>Maison Souvannaphoum is a historical boutique hotel in the heart of Luang Prabang with magnificent French colonial rooms infused with romance and style and many more.</p>
@@ -76,7 +76,7 @@ export default function Home() {
                         <div style={{ marginTop: "150px" }} />
                     </div>
                     <div className='footer'>
-                        <img className='homebottom' src={bottom}></img>
+                        <img className='homebottom' src={bottom} alt=''></img>
                     </div><br />
                 </div>
             </div>
