@@ -32,12 +32,12 @@ export default function UpdateGuest() {
 
     const onSubmit=async (e)=> {
         e.preventDefault();
-        await axios.put(`http://localhost:8888/guest/update/${guestId}`, user,{headers:Auth()});
+        await axios.put(`http://16.171.135.69:8888/guest/update/${guestId}`, user,{headers:Auth()});
         navigate("/guest/viewall")
     };
 
     const loadUser=async()=>{
-        const result=await axios.get(`http://localhost:8888/guest/view/${guestId}`,{headers:Auth()});
+        const result=await axios.get(`http://16.171.135.69:8888/guest/view/${guestId}`,{headers:Auth()});
         setUser(result.data);
     }
 

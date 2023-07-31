@@ -21,7 +21,7 @@ export default function ViewGuest() {
   }, []);
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8888/guest/view/${guestId}`,{headers:Auth()});
+    const result = await axios.get(`http://16.171.135.69:8888/guest/view/${guestId}`,{headers:Auth()});
     setUser(result.data);
   };
 

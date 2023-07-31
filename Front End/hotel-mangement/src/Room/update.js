@@ -29,12 +29,12 @@ export default function UpdateRoom() {
 
     const onSubmit=async (e)=> {
         e.preventDefault();
-        await axios.put(`http://localhost:8888/room/update/${roomId}`, user);
+        await axios.put(`http://16.171.135.69:8888/room/update/${roomId}`, user);
         navigate("/room/viewall")
     };
 
     const loadUser=async()=>{
-        const result=await axios.get(`http://localhost:8888/room/view/${roomId}`);
+        const result=await axios.get(`http://16.171.135.69:8888/room/view/${roomId}`);
         setUser(result.data);
     }
 

@@ -13,12 +13,12 @@ function ViewAllReservation(){
   }, []);
 
   const loadUsers=async()=>{
-      const result=await axios.get("http://localhost:8888/reservation/viewall");
+      const result=await axios.get("http://16.171.135.69:8888/reservation/viewall");
       setUsers(result.data);
   }
 
   const deleteUser=async (reservationId)=>{
-      const del=await axios.delete(`http://localhost:8888/reservation/delete/${reservationId}`)
+      const del=await axios.delete(`http://16.171.135.69:8888/reservation/delete/${reservationId}`)
       alert(del.data)
       loadUsers()
   }

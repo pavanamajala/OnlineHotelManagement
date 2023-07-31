@@ -33,7 +33,7 @@ export default function Login() {
     setLoading("Logging in...")
 
 
-    axios.post('http://localhost:8888/user/authenticate', {
+    axios.post('http://16.171.135.69:8888/user/authenticate', {
       username: email,
       password: password
 
