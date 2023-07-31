@@ -216,7 +216,7 @@ public class UserControl {
 //		
 //		User us = userRepository.findByUsername(authenticationRequest.getUsername());
 //
-//		return ResponseEntity.ok(new AuthenticationResponse(jwt, us));		
+//		return ResponseEntity.ok(new AuthenticationResponse(jwt, us));	
 		
 	}
 	

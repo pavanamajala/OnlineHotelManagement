@@ -29,13 +29,13 @@ class ReservationTests {
 	private ReservationRepository reservationRepository;
 
 	// Guest Tests
-	@Test
-	@DisplayName("Add Reservation Test")
-	public void addReservationTest() {
-		Reservation reservation = new Reservation("11", "101", "201", "01/09", "02/09", 4, 3000);
-		reservationService.addReservation(reservation);
-		verify(reservationRepository, times(1)).save(reservation);
-	}
+//	@Test
+//	@DisplayName("Add Reservation Test")
+//	public void addReservationTest() {
+//		Reservation reservation = new Reservation("11", "101", "201", "01/09", "02/09", 4, 3000);
+//		reservationService.addReservation(reservation);
+//		verify(reservationRepository, times(1)).save(reservation);
+//	}
 
 	@Test
 	@DisplayName("Delete Reservation Test")

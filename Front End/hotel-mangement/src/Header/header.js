@@ -8,7 +8,7 @@ export default function Header() {
       <div className="container-md">
            <a className="navbar-brand text-left text-dark" href="/">Home</a>
         <div className="navbar-brand text-centre">
-            <b className='text-dark'>E-BOOK MAKER APP</b>
+            <b className='text-dark'>Online Hotel Management</b>
         </div>
         <div className='navbar-brand text-right '> 
             <a className='pavresume text-dark' href="/about">About</a>
