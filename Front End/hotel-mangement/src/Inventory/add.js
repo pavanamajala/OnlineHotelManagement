@@ -39,7 +39,7 @@ export default function AddInventory() {
             document.getElementById("text").innerHTML = "ID can't be empty";
         } else{
         e.preventDefault();
-        await axios.post("http://16.171.133.10:8888/inventory/add", user, {headers:Auth()});
+        await axios.post("http://13.49.68.81:8888/inventory/add", user, {headers:Auth()});
         navigate("/inventory/viewall")
         }
     };

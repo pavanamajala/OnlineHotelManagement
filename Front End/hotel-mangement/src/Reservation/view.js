@@ -21,7 +21,7 @@ export default function ViewReservation() {
   },[]);
 
   const loadUser = async () => {
-    const result = await axios.get(`http://16.171.133.10:8888/reservation/view/${reservationId}`);
+    const result = await axios.get(`http://13.49.68.81:8888/reservation/view/${reservationId}`);
     setUser(result.data);
   };
 

@@ -14,12 +14,12 @@ function ViewAllInventory() {
   },[]);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://16.171.133.10:8888/inventory/viewall");
+    const result = await axios.get("http://13.49.68.81:8888/inventory/viewall");
     setUsers(result.data);
   }
 
   const deleteUser = async (inventoryId) => {
-    await axios.delete(`http://16.171.133.10:8888/inventory/delete/${inventoryId}`, { headers: Auth() })
+    await axios.delete(`http://13.49.68.81:8888/inventory/delete/${inventoryId}`, { headers: Auth() })
     loadUsers()
   }
 

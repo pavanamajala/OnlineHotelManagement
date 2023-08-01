@@ -38,7 +38,7 @@ export default function AddRoom() {
             document.getElementById("text").innerHTML = "ID can't be empty";
         } else {
             e.preventDefault();
-            await axios.post("http://16.171.133.10:8888/room/add", user);
+            await axios.post("http://13.49.68.81:8888/room/add", user);
             navigate("/room/viewall")
         }
     };

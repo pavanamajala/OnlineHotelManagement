@@ -31,12 +31,12 @@ export default function UpdateEmployee() {
 
     const onSubmit=async (e)=> {
         e.preventDefault();
-        await axios.put(`http://16.171.133.10:8888/user/employee/update/${employeeId}`, user, {headers:Auth()});
+        await axios.put(`http://13.49.68.81:8888/user/employee/update/${employeeId}`, user, {headers:Auth()});
         navigate("/user/employee/viewall")
     };
 
     const loadUser=async()=>{
-        const result=await axios.get(`http://16.171.133.10:8888/user/employee/view/${employeeId}`, {headers:Auth()});
+        const result=await axios.get(`http://13.49.68.81:8888/user/employee/view/${employeeId}`, {headers:Auth()});
         setUser(result.data);
     }
 

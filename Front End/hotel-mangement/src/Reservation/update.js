@@ -32,12 +32,12 @@ export default function UpdateReservation() {
 
     const onSubmit=async (e)=> {
         e.preventDefault();
-        await axios.put(`http://16.171.133.10:8888/reservation/update/${reservationId}`, user);
+        await axios.put(`http://13.49.68.81:8888/reservation/update/${reservationId}`, user);
         navigate("/reservation/viewall")
     };
 
     const loadUser=async()=>{
-        const result = await axios.get(`http://16.171.133.10:8888/reservation/view/${reservationId}`);
+        const result = await axios.get(`http://13.49.68.81:8888/reservation/view/${reservationId}`);
         setUser(result.data);
     }
 

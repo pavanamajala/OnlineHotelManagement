@@ -14,12 +14,12 @@ function ViewAllGuest(){
     },[]);
 
     const loadUsers=async()=>{
-        const result=await axios.get("http://16.171.133.10:8888/guest/viewall",{headers:Auth()});
+        const result=await axios.get("http://13.49.68.81:8888/guest/viewall",{headers:Auth()});
         setUsers(result.data);
     }
 
     const deleteUser=async (guestId)=>{
-        await axios.delete(`http://16.171.133.10:8888/guest/delete/${guestId}`)
+        await axios.delete(`http://13.49.68.81:8888/guest/delete/${guestId}`)
         loadUsers();
     }
 

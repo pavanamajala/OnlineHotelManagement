@@ -44,7 +44,7 @@ export default function AddReservation() {
             document.getElementById("text").innerHTML = "ID can't be empty";
         } else{
         e.preventDefault();
-        const res=await axios.post("http://16.171.133.10:8888/reservation/add", user);
+        const res=await axios.post("http://13.49.68.81:8888/reservation/add", user);
         if(res.data === 'noroom'){
             alert("You entered room is already booked! Please Select any other available room")
         } else if(res.data === 'noguest'){
@@ -58,9 +58,9 @@ export default function AddReservation() {
     };
 
     const getIDS = async() => {
-        let room = await axios.get("http://16.171.133.10:8888/room/view-all-room-id");
+        let room = await axios.get("http://13.49.68.81:8888/room/view-all-room-id");
         setRoomIds(room.data);
-        let guest = await axios.get("http://16.171.133.10:8888/guest/view-all-guest-id");
+        let guest = await axios.get("http://13.49.68.81:8888/guest/view-all-guest-id");
         setGuestIds(guest.data);
     }
 
@@ -262,7 +262,7 @@ export default function AddReservation() {
     //     } else{
     //         console.log(user)
     //     e.preventDefault();
-    //     const res=await axios.post("http://16.171.133.10:8888/reservation/add", user);
+    //     const res=await axios.post("http://13.49.68.81:8888/reservation/add", user);
     //     console.log(res)
     //     navigate("/reservation/viewall")
     //     }
