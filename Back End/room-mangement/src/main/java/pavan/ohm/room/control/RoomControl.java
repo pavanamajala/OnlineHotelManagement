@@ -39,5 +39,10 @@ public class RoomControl {
 	public List<Room> viewAllRoom() {
 		return roomService.viewAllRoom();
 	}
+	
+	@GetMapping("/view-all-room-id")
+	public List<String> viewAllRoomId(){
+		return roomService.viewAllRoomId();
+	}
 
 }

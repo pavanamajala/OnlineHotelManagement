@@ -1,11 +1,14 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default function AddReservation() {
 
     let navigate=useNavigate();
+
+    const [roomIds, setRoomIds] = useState([]);
+    const [guestIds, setGuestIds] = useState([]);
 
     const [user, setUser]=useState({
         reservationId:"",
@@ -31,7 +34,7 @@ export default function AddReservation() {
      const{reservationId, roomId, guestId, checkInDate, checkOutDate, noOfGuest, totalPrice}=user
 
     const onInputChange=(e)=>{
-
+        console.log(e.target.value);
         setUser({ ...user, [e.target.name]: e.target.value})
 
     };
@@ -53,6 +56,18 @@ export default function AddReservation() {
         }
         }
     };
+
+    const getIDS = async() => {
+        let room = await axios.get("http://16.171.133.10:8888/room/view-all-room-id");
+        setRoomIds(room.data);
+        let guest = await axios.get("http://16.171.133.10:8888/guest/view-all-guest-id");
+        setGuestIds(guest.data);
+    }
+
+    useEffect(() => {
+        getIDS();
+    }, [])
+    
   return (
 
     <div className="container">
@@ -81,6 +96,7 @@ export default function AddReservation() {
                             value={reservationId}
                             onChange={(e)=>onInputChange(e)}
                             id="reserve-id"
+                            required={true}
                         />
                     </div>
                     <p className='text-danger' id="text"></p>
@@ -88,7 +104,7 @@ export default function AddReservation() {
                         <label htmlFor="Id" className="form-label">
                             <b>Room ID</b>
                         </label>
-                        <input
+                        {/* <input
                             type={"number"}
                             className="form-control"
                             placeholder="Enter Room ID"
@@ -96,13 +112,27 @@ export default function AddReservation() {
                             value={roomId}
                             onChange={(e)=>onInputChange(e)}
                             id="room-id"
-                        />
+                        /> */}
+                          <select
+                              onChange={(e) => onInputChange(e)}
+                              className="form-control"
+                              placeholder="Select Room ID"
+                              name="roomId" 
+                              value={roomId}
+                              id="room-id"
+                              required={true}
+                            >
+                                {roomIds.length> 0 && roomIds?.map((id) => (
+                                    <option value={id}>{id}</option>
+                                ))}
+
+                          </select>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="Id" className="form-label">
                             <b>Guest ID</b>
                         </label>
-                        <input
+                        {/* <input
                             type={"number"}
                             className="form-control"
                             placeholder="Enter Guest ID"
@@ -110,9 +140,22 @@ export default function AddReservation() {
                             value={guestId}
                             onChange={(e)=>onInputChange(e)}
                             id="guest-id"
-                        />
-                    </div>
-                    <div className="mb-3">
+                        /> */}
+                          <select
+                              className="form-control"
+                              placeholder="Enter Guest ID"
+                              name="guestId"
+                              value={guestId}
+                              onChange={(e)=>onInputChange(e)}
+                              id="guest-id"
+                          >
+                              {guestIds.length > 0 && guestIds?.map((id) => (
+                                  <option>{id}</option>
+                              ))}
+
+                          </select>
+                      </div>
+                      <div className="mb-3">
                         <label htmlFor="checkIn" className="form-label">
                             <b> check In Date</b>
                         </label>

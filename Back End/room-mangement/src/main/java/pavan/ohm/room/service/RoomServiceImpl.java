@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import pavan.ohm.room.entity.Room;
 import pavan.ohm.room.repository.RoomRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -51,6 +52,18 @@ public class RoomServiceImpl implements RoomService {
 
 	public List<Room> viewAllRoom() {
 		return roomRepository.findAll();
+	}
+	
+	public List<String> viewAllRoomId(){
+		
+		List<Room> allRooms = roomRepository.findAll();
+		ArrayList<String> availableRooms = new ArrayList<String>();
+		for(Room room : allRooms) {
+			if(room.getRoomAvailable().equals("true")) {
+				availableRooms.add(room.getRoomId());
+			}
+		}
+		return availableRooms;
 	}
 
 }

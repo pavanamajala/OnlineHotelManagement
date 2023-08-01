@@ -38,7 +38,7 @@ public class ReservationServiceImpl implements ReservationService {
 				return "noroom";
 			}
 		} catch (Exception e) {
-			return "noguest";
+			return "noguest" + e;
 		}
 	}
 
@@ -93,7 +93,7 @@ public class ReservationServiceImpl implements ReservationService {
 	@Override
 	public List<Room> viewAllAvailableRooms() {
 //		@SuppressWarnings("unchecked")
-//		List<Room> room1 = (List<Room>) restTemplate.getForObject("http://localhost:8082/room/viewall", List.class);
+//		List<Room> room1 = (List<Room>) restTemplate.getForObject("http://16.171.133.10:8082/room/viewall", List.class);
 //		List<Room> room3=null;
 //		for(Room room2: room1) {
 //			if(room2.getRoomAvailable().equals("true")) {

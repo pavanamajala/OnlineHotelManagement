@@ -16,4 +16,6 @@ public interface GuestService {
 	public Guest viewGuest(String id);
 
 	public List<Guest> viewAllGuest();
+	
+	public List<String> viewAllGuestId();
 }

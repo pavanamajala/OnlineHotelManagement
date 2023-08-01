@@ -15,5 +15,7 @@ public interface RoomService {
 	public Room viewRoom(String id);
 
 	public List<Room> viewAllRoom();
+	
+	public List<String> viewAllRoomId();
 
 }

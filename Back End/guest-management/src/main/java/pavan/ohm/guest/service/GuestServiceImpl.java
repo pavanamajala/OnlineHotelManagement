@@ -1,7 +1,9 @@
 package pavan.ohm.guest.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,6 +56,12 @@ public class GuestServiceImpl implements GuestService {
   	public List<Guest> viewAllGuest() {
   		return guestRepository.findAll();
   	}
+
+	@Override
+	public List<String> viewAllGuestId() {
+		List<Guest> allGuests = guestRepository.findAll();
+		return allGuests.stream().map(Guest::getGuestId).collect(Collectors.toList());
+	}
 
 	
 }

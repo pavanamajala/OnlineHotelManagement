@@ -40,5 +40,10 @@ public class GuestControl {
 	public List<Guest> viewAllGuest() {
 		return guestService.viewAllGuest();
 	}
+	
+	@GetMapping("/view-all-guest-id")
+	public List<String> viewAllGuestId(){
+		return guestService.viewAllGuestId();
+	}
 
 }
