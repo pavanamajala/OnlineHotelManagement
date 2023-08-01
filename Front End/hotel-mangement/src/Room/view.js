@@ -18,7 +18,7 @@ export default function ViewRoom() {
   },[]);
 
   const loadUser = async () => {
-    const result = await axios.get(`http://16.171.135.69:8888/room/view/${roomId}`);
+    const result = await axios.get(`http://16.171.133.10:8888/room/view/${roomId}`);
     setUser(result.data);
   };
 

@@ -13,12 +13,12 @@ function ViewALLRoom(){
     }, []);
   
     const loadUsers=async()=>{
-        const result=await axios.get("http://16.171.135.69:8888/room/viewall");
+        const result=await axios.get("http://16.171.133.10:8888/room/viewall");
         setUsers(result.data);
     }
   
     const deleteUser=async (roomId)=>{
-        await axios.delete(`http://16.171.135.69:8888/room/delete/${roomId}`)
+        await axios.delete(`http://16.171.133.10:8888/room/delete/${roomId}`)
         loadUsers()
     }
 

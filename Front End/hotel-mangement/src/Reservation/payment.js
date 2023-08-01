@@ -22,7 +22,7 @@ export default function Payment(){
       },[]);
     
       const loadUser = async () => {
-        const result = await axios.get(`http://16.171.135.69:8888/reservation/view/${11}`);
+        const result = await axios.get(`http://16.171.133.10:8888/reservation/view/${11}`);
         setUser(result.data);
       };
     

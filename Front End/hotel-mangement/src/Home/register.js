@@ -43,7 +43,7 @@ export default function Register() {
     } else if (password !== repassword) {
       document.getElementById("repassValidate").innerHTML = "Password's didn't match";
     } else {
-      axios.post('http://16.171.135.69:8888/user/sign/add', {
+      axios.post('http://16.171.133.10:8888/user/sign/add', {
         username: email,
         password: password,
         role: role

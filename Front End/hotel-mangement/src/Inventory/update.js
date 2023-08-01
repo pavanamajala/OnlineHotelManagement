@@ -30,12 +30,12 @@ export default function UpdateInventory() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.put(`http://16.171.135.69:8888/inventory/update/${inventoryId}`, user, { headers: Auth() });
+        await axios.put(`http://16.171.133.10:8888/inventory/update/${inventoryId}`, user, { headers: Auth() });
         navigate("/inventory/viewall")
     };
 
     const loadUser = async () => {
-        const result = await axios.get(`http://16.171.135.69:8888/inventory/view/${inventoryId}`, { headers: Auth() });
+        const result = await axios.get(`http://16.171.133.10:8888/inventory/view/${inventoryId}`, { headers: Auth() });
         setUser(result.data);
     }
 

@@ -40,7 +40,7 @@ export default function AddEmployee() {
             document.getElementById("text").innerHTML = "ID can't be empty";
         } else{
         e.preventDefault();
-        await axios.post("http://16.171.135.69:8888/user/employee/add", user, {headers:Auth()});
+        await axios.post("http://16.171.133.10:8888/user/employee/add", user, {headers:Auth()});
         navigate("/user/employee/viewall")
         }
     };
