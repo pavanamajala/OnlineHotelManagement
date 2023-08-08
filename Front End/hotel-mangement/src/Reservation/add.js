@@ -20,6 +20,8 @@ export default function AddReservation() {
         totalPrice:""
     });
 
+    const [rooms, setRooms] = useState([]);
+
     // function validateform(){  
     //     var id=document.getElementById("id"); 
     //     let text;
@@ -62,7 +64,20 @@ export default function AddReservation() {
         setRoomIds(room.data);
         let guest = await axios.get("http://13.49.68.81:8888/guest/view-all-guest-id");
         setGuestIds(guest.data);
+
+        const result=await axios.get("http://13.49.68.81:8888/room/viewall");
+        setRooms(result.data);
     }
+
+    useEffect(() => {
+        console.log(user.roomId);
+        rooms.forEach((roo) => {
+            if(roo.roomId == user.roomId){
+                setUser({ ...user, ["totalPrice"]: roo.roomRent})
+            }
+        })
+        console.log(user);
+    }, [user.roomId])
 
     useEffect(() => {
         getIDS();
