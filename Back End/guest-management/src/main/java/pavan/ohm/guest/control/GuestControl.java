@@ -10,6 +10,7 @@ import pavan.ohm.guest.service.GuestService;
 
 @RestController
 @RequestMapping("/guest")
+@CrossOrigin(origins="*")
 public class GuestControl {
 
 	@Autowired

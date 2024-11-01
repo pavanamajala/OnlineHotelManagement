@@ -49,8 +49,8 @@ class ReservationTests {
 	public void ViewAllReservationTest() {
 		when(reservationRepository.findAll())
 				.thenReturn(Stream
-						.of(new Reservation("11", "101", "201", "01/09", "02/09", 4, 3000),
-								new Reservation("12", "202", "502", "08/09", "09/09", 8, 8000))
+						.of(new Reservation(),
+								new Reservation())
 						.collect(Collectors.toList()));
 		assertEquals(2, reservationService.viewAllReservation().size());
 	}
@@ -58,10 +58,10 @@ class ReservationTests {
 	@Test
 	@DisplayName("Update Reservation Test")
 	public void updateReservation() {
-		Reservation reservation = new Reservation("11", "101", "201", "01/09", "02/09", 4, 3000);
+		Reservation reservation = new Reservation();
 		when(reservationRepository.save(reservation)).thenReturn(reservation);
 		String id = reservation.getReservationId();
-		reservation.setCheckInDate("31/08");
+//		reservation.setCheckOutDate();
 		reservationService.updateReservation(id, reservation);
 		Assertions.assertThat(reservation.getCheckInDate().equals("31/08"));
 	}

@@ -11,11 +11,12 @@ import pavan.ohm.reservation.service.ReservationService;
 
 @RestController
 @RequestMapping("/reservation")
+@CrossOrigin(origins = "*")
 public class ReservationControl {
 
 	@Autowired
-	ReservationService reservationService;
-	
+	private ReservationService reservationService;
+
 	// Reservation CRUD Operations
 	@PostMapping("/add")
 	public String addReservation(@RequestBody Reservation reservation) {
@@ -41,7 +42,7 @@ public class ReservationControl {
 	public List<Reservation> viewAllReservation() {
 		return reservationService.viewAllReservation();
 	}
-	
+
 	@GetMapping("/room/viewall")
 	public List<Room> viewAllRoom() {
 		return reservationService.viewAllAvailableRooms();

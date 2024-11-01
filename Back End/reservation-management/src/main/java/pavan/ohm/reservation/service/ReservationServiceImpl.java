@@ -25,9 +25,10 @@ public class ReservationServiceImpl implements ReservationService {
 	@Override
 	public String addReservation(Reservation reservation) {
 		try {
+			System.out.println(reservation.toString());
 			Room room = restTemplate.getForObject("http://localhost:8082/room/view/" + reservation.getRoomId(),
 					Room.class);
-			Guest guest = restTemplate.getForObject("http://localhost:8084/guest/view/" + reservation.getGuestId(),
+			Guest guest = restTemplate.getForObject("http://localhost:8084/guest/view/" + Long.valueOf(reservation.getGuestId()) ,
 					Guest.class);
 			if (room.getRoomAvailable().equals("true")) {
 				reservationRepository.save(reservation);

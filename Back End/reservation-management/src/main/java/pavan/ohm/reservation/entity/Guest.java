@@ -9,7 +9,7 @@ public class Guest {
 	@Id
 	private String guestId;
 	private String guestName;
-	private long guestContact;
+	private String guestContact;
 	private String guestEmail;
 	private String guestGender;
 	private String guestAddress;
@@ -19,7 +19,7 @@ public class Guest {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Guest(String guestId, String guestName, long guestContact, String guestEmail, String guestGender,
+	public Guest(String guestId, String guestName, String guestContact, String guestEmail, String guestGender,
 			String guestAddress) {
 		super();
 		this.guestId = guestId;
@@ -46,11 +46,11 @@ public class Guest {
 		this.guestName = guestName;
 	}
 
-	public long getGuestContact() {
+	public String getGuestContact() {
 		return guestContact;
 	}
 
-	public void setGuestContact(long guestContact) {
+	public void setGuestContact(String guestContact) {
 		this.guestContact = guestContact;
 	}
 
